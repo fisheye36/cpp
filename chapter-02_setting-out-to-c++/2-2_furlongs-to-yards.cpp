@@ -14,11 +14,10 @@ int furlongsToYards(int);
 int main()
 {
     using std::cout;
-    using std::cin;
 
     cout << "Enter a distance in furlongs: ";
     int furlongs;
-    cin >> furlongs;
+    std::cin >> furlongs;
     cout << furlongs << " furlongs = " << furlongsToYards(furlongs) << " yards.\n";
 
     return 0;

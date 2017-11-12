@@ -20,19 +20,18 @@ int main()
 {
     using std::cout;
     using std::cin;
-    using std::endl;
 
     cout << "Enter the number of hours: ";
     int hours;
     cin >> hours;
-    
+
     cout << "Enter the number of minutes: ";
     int minutes;
     cin >> minutes;
 
     cout << "Time: ";
     clock(hours, minutes);
-    cout << endl;
+    cout << std::endl;
 
     return 0;
 }
