@@ -46,8 +46,8 @@ int main()
 
 double latitude(int deg, int min, int sec)
 {
-    const int MinutesInDegree = 60;
     const int SecondsInMinute = 60;
+    const int MinutesInDegree = 60;
 
     return deg + (min + double(sec) / SecondsInMinute) / MinutesInDegree;
 }
