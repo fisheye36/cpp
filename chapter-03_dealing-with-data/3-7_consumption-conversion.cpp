@@ -22,7 +22,6 @@ int main()
     cout << "Enter fuel consumption in European style (l/100 km): ";
     double consumption;
     std::cin >> consumption;
-
     cout << consumption << " l/100 km = " << EuropeanToUS(consumption)
          << " mpg\n";
 

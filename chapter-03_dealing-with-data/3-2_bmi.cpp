@@ -27,6 +27,7 @@ int main()
     cout << "Enter your height in feet and inches:\nFeet: ";
     int feet;
     cin >> feet;
+
     cout << "Inches: ";
     int inches;
     cin >> inches;

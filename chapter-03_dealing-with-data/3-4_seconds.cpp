@@ -35,8 +35,10 @@ void displayTime(long long seconds)
 
     long long days = seconds / (HoursInDay * MinutesInHour * SecondsInMinute);
     long remainingSeconds = seconds % (HoursInDay * MinutesInHour * SecondsInMinute);
+
     int hours = remainingSeconds / (MinutesInHour * SecondsInMinute);
     remainingSeconds = remainingSeconds % (MinutesInHour * SecondsInMinute);
+
     int minutes = remainingSeconds / SecondsInMinute;
     remainingSeconds = remainingSeconds % SecondsInMinute;
 
