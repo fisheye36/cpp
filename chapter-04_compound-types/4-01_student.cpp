@@ -22,33 +22,37 @@
  */
 
 #include <iostream>
+#include <string>
+
+struct student
+{
+    std::string firstName;
+    std::string lastName;
+    char grade;
+    int age;
+};
 
 int main()
 {
     using std::cout;
     using std::cin;
 
-    const int MaxSize = 40;
-
     cout << "What is your first name? ";
-    char firstName[MaxSize];
-    cin.getline(firstName, MaxSize);
+    student user;
+    getline(cin, user.firstName);
 
     cout << "What is your last name? ";
-    char lastName[MaxSize];
-    cin.getline(lastName, MaxSize);
+    getline(cin, user.lastName);
 
     cout << "What letter grade do you deserve? ";
-    char grade;
-    cin >> grade;
+    cin >> user.grade;
 
     cout << "What is your age? ";
-    int age;
-    cin >> age;
+    cin >> user.age;
 
-    cout << "\nName: " << lastName << ", " << firstName
-         << "\nGrade: " << char(grade + 1)
-         << "\nAge: " << age << std::endl;
+    cout << "\nName: " << user.lastName << ", " << user.firstName
+         << "\nGrade: " << char(user.grade + 1)
+         << "\nAge: " << user.age << std::endl;
 
     return 0;
 }
