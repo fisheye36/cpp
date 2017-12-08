@@ -24,7 +24,7 @@
 #include <iostream>
 #include <string>
 
-struct student
+struct Student
 {
     std::string firstName;
     std::string lastName;
@@ -38,7 +38,7 @@ int main()
     using std::cin;
 
     cout << "What is your first name? ";
-    student user;
+    Student user;
     getline(cin, user.firstName);
 
     cout << "What is your last name? ";
