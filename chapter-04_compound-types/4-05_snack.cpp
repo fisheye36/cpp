@@ -24,10 +24,10 @@ struct CandyBar
 
 int main()
 {
-    CandyBar snack = {"Mocha Munch", 2.3, 350};
-    std::cout << "Snack \"" << snack.brand << "\""
-                 "\nweight: " << snack.weight
-              << "\ncalories: " << snack.calories << std::endl;
+    CandyBar snack = { "Mocha Munch", 2.3, 350 };
+    std::cout << "Snack: " << snack.brand
+              << "\nWeight: " << snack.weight
+              << "\nCalories: " << snack.calories << std::endl;
 
     return 0;
 }

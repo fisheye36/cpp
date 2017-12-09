@@ -25,9 +25,7 @@ int main()
     using std::cout;
     using std::endl;
 
-    const int Amount = 3;
-
-    CandyBar * snacks = new CandyBar[Amount];
+    CandyBar * snacks = new CandyBar[3];
     setSnackInformation(snacks, "Mars", 2.4, 320);
     setSnackInformation(snacks + 1, "Twix", 2.6, 380);
     setSnackInformation(snacks + 2, "Snickers", 3.2, 360);
@@ -52,7 +50,7 @@ void setSnackInformation(CandyBar * snack, std::string brand, double weight, int
 
 void displaySnackInformation(CandyBar * snack)
 {
-    std::cout << "Snack \"" << snack->brand << "\""
-                 "\nweight: " << snack->weight
-              << "\ncalories: " << snack->calories << std::endl;
+    std::cout << "Snack: " << snack->brand
+              << "\nWeight: " << snack->weight
+              << "\nCalories: " << snack->calories << std::endl;
 }

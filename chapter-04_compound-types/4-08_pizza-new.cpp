@@ -23,19 +23,19 @@ int main()
     using std::cout;
     using std::cin;
 
-    cout << "Enter pizza diameter in centimeters: ";
     Pizza * pizza = new Pizza;
+    cout << "Enter pizza diameter in centimeters: ";
     (cin >> pizza->diameter).get();
 
-    cout << "Enter the name of the pizza company: ";
+    cout << "Enter pizza company name: ";
     getline(cin, pizza->company);
 
     cout << "Enter pizza weight in kilograms: ";
     cin >> pizza->weight;
 
     cout << "\nPizza \"" << pizza->company << "\"\n"
-            "diameter: " << pizza->diameter << " cm\n"
-            "weight: " << pizza->weight << " kg\n";
+            "Diameter: " << pizza->diameter << " cm\n"
+            "Weight: " << pizza->weight << " kg\n";
     delete pizza;
 
     return 0;

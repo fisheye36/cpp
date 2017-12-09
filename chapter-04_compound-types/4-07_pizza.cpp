@@ -30,8 +30,8 @@ int main()
     using std::cout;
     using std::cin;
 
-    cout << "Enter the name of the pizza company: ";
     Pizza pizza;
+    cout << "Enter pizza company name: ";
     getline(cin, pizza.company);
 
     cout << "Enter pizza diameter in centimeters: ";
@@ -41,8 +41,8 @@ int main()
     cin >> pizza.weight;
 
     cout << "\nPizza \"" << pizza.company << "\"\n"
-            "diameter: " << pizza.diameter << " cm\n"
-            "weight: " << pizza.weight << " kg\n";
+            "Diameter: " << pizza.diameter << " cm\n"
+            "Weight: " << pizza.weight << " kg\n";
 
     return 0;
 }

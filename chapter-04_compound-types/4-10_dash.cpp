@@ -27,7 +27,7 @@ int main()
     double averageTime = (times[0] + times[1] + times[2]) / Amount;
     cout << "\nYour times are: "
          << times[0] << " s, " << times[1] << " s, " << times[2] << " s.\n"
-         << "Your average time is " << averageTime << " s.\n";
+            "Your average time is " << averageTime << " s.\n";
 
     return 0;
 }

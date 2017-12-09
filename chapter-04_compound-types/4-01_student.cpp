@@ -37,8 +37,8 @@ int main()
     using std::cout;
     using std::cin;
 
-    cout << "What is your first name? ";
     Student user;
+    cout << "What is your first name? ";
     getline(cin, user.firstName);
 
     cout << "What is your last name? ";
