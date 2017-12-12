@@ -35,7 +35,7 @@ int main()
 
 long long sumBetween(int from, int to)
 {
-    long long sum = 0;
+    long long sum = 0LL;
     for (long long i = from; i <= to; i++)
         sum += i;
 
