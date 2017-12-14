@@ -38,5 +38,5 @@ int main()
 
 double lightYearsToAstroUnits(double lightYears)
 {
-    return lightYears * 63240;
+    return lightYears * 63240.0;
 }
