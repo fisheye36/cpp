@@ -11,7 +11,7 @@
 
 #include <iostream>
 
-double fuelConsumption(int, double);
+double fuelConsumption(unsigned, double);
 
 int main()
 {
@@ -19,7 +19,7 @@ int main()
     using std::cin;
 
     cout << "Enter distance in kilometers: ";
-    int distance;
+    unsigned distance;
     cin >> distance;
 
     cout << "Now, enter the amount of fuel consumed in liters: ";
@@ -32,7 +32,7 @@ int main()
     return 0;
 }
 
-double fuelConsumption(int distance, double fuel)
+double fuelConsumption(unsigned distance, double fuel)
 {
     return fuel / distance * 100.0;
 }

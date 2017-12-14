@@ -18,7 +18,7 @@
 
 #include <iostream>
 
-double populationPercentage(long long, long long);
+double populationPercentage(unsigned long long, unsigned long long);
 
 int main()
 {
@@ -26,11 +26,11 @@ int main()
     using std::cin;
 
     cout << "Enter the world's population: ";
-    long long worldPopulation;
+    unsigned long long worldPopulation;
     cin >> worldPopulation;
 
     cout << "Enter the population of Poland: ";
-    long long polandPopulation;
+    unsigned long long polandPopulation;
     cin >> polandPopulation;
 
     cout << "The population of Poland is "
@@ -40,7 +40,7 @@ int main()
     return 0;
 }
 
-double populationPercentage(long long country, long long world)
+double populationPercentage(unsigned long long country, unsigned long long world)
 {
     return 100.0 * country / world;
 }

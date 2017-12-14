@@ -11,14 +11,14 @@
 #include <iostream>
 #include <string>
 
-unsigned long long yearlySales(unsigned *, int);
+unsigned long long yearlySales(unsigned *, unsigned);
 
 int main()
 {
     using std::cout;
 
-    const int Years = 3;
-    const int MonthsInYear = 12;
+    const unsigned Years = 3u;
+    const unsigned MonthsInYear = 12u;
     const std::string Months[MonthsInYear] =
     {
         "January",
@@ -36,10 +36,10 @@ int main()
     };
 
     unsigned sales[Years][MonthsInYear];
-    for (int year = 0; year < Years; year++)
+    for (unsigned year = 0u; year < Years; year++)
     {
-        cout << "Year " << year + 1 << ":\n";
-        for (int month = 0; month < MonthsInYear; month++)
+        cout << "Year " << year + 1u << ":\n";
+        for (unsigned month = 0u; month < MonthsInYear; month++)
         {
             cout << "Enter the number of books you sold in " << Months[month] << ": ";
             std::cin >> sales[year][month];
@@ -49,23 +49,23 @@ int main()
 
     unsigned long long sumYear[Years];
     unsigned long long sum = 0uLL;
-    for (int year = 0; year < Years; year++)
+    for (unsigned year = 0u; year < Years; year++)
     {
         sumYear[year] = yearlySales(sales[year], MonthsInYear);
         sum += sumYear[year];
     }
 
-    for (int year = 0; year < Years; year++)
-        cout << "You sold " << sumYear[year] << " books in year " << year + 1 << ".\n";
+    for (unsigned year = 0u; year < Years; year++)
+        cout << "You sold " << sumYear[year] << " books in year " << year + 1u << ".\n";
     cout << "You sold " << sum << " books total in " << Years << " years.\n";
 
     return 0;
 }
 
-unsigned long long yearlySales(unsigned * sales, int months)
+unsigned long long yearlySales(unsigned * sales, unsigned months)
 {
     unsigned long long sum = 0uLL;
-    for (int month = 0; month < months; month++)
+    for (unsigned month = 0u; month < months; month++)
         sum += sales[month];
 
     return sum;

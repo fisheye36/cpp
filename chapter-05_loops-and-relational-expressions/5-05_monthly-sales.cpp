@@ -14,13 +14,13 @@
 #include <iostream>
 #include <string>
 
-unsigned long long yearlySales(unsigned *, int);
+unsigned long long yearlySales(unsigned *, unsigned);
 
 int main()
 {
     using std::cout;
 
-    const int MonthsInYear = 12;
+    const unsigned MonthsInYear = 12u;
     const std::string Months[MonthsInYear] =
     {
         "January",
@@ -38,7 +38,7 @@ int main()
     };
 
     unsigned sales[MonthsInYear];
-    for (int month = 0; month < MonthsInYear; month++)
+    for (unsigned month = 0u; month < MonthsInYear; month++)
     {
         cout << "Enter the number of books you sold in " << Months[month] << ": ";
         std::cin >> sales[month];
@@ -50,10 +50,10 @@ int main()
     return 0;
 }
 
-unsigned long long yearlySales(unsigned * sales, int months)
+unsigned long long yearlySales(unsigned * sales, unsigned months)
 {
     unsigned long long sum = 0uLL;
-    for (int month = 0; month < months; month++)
+    for (unsigned month = 0u; month < months; month++)
         sum += sales[month];
 
     return sum;

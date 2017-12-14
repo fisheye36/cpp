@@ -18,7 +18,7 @@
 
 #include <iostream>
 
-double latitude(int, int, int);
+double latitude(unsigned, unsigned, unsigned);
 
 int main()
 {
@@ -27,15 +27,15 @@ int main()
 
     cout << "Enter a latitude in degrees, minutes and seconds:\n"
             "First, enter the degrees: ";
-    int degrees;
+    unsigned degrees;
     cin >> degrees;
 
     cout << "Next, enter the minutes of arc: ";
-    int minutes;
+    unsigned minutes;
     cin >> minutes;
 
     cout << "Finally, enter the seconds of arc: ";
-    int seconds;
+    unsigned seconds;
     cin >> seconds;
 
     cout << degrees << " degrees, " << minutes << " minutes, " << seconds
@@ -44,10 +44,10 @@ int main()
     return 0;
 }
 
-double latitude(int deg, int min, int sec)
+double latitude(unsigned deg, unsigned min, unsigned sec)
 {
-    const int SecondsInMinute = 60;
-    const int MinutesInDegree = 60;
+    const unsigned SecondsInMinute = 60u;
+    const unsigned MinutesInDegree = 60u;
 
     return deg + (min + double(sec) / SecondsInMinute) / MinutesInDegree;
 }

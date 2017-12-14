@@ -15,8 +15,8 @@
 
 #include <iostream>
 
-double feetAndInchesToMeters(int, int);
-double poundsToKilograms(int);
+double feetAndInchesToMeters(unsigned, unsigned);
+double poundsToKilograms(unsigned);
 double bmi(double, double);
 
 int main()
@@ -25,15 +25,15 @@ int main()
     using std::cin;
 
     cout << "Enter your height in feet and inches:\nFeet: ";
-    int feet;
+    unsigned feet;
     cin >> feet;
 
     cout << "Inches: ";
-    int inches;
+    unsigned inches;
     cin >> inches;
 
     cout << "Now, enter your weight in pounds: ";
-    int pounds;
+    unsigned pounds;
     cin >> pounds;
 
     double heightMeters = feetAndInchesToMeters(feet, inches);
@@ -44,15 +44,15 @@ int main()
     return 0;
 }
 
-double feetAndInchesToMeters(int feet, int inches)
+double feetAndInchesToMeters(unsigned feet, unsigned inches)
 {
-    const int InchesInFoot = 12;
+    const unsigned InchesInFoot = 12u;
     const double InchToMeter = 0.0254;
 
     return (feet * InchesInFoot + inches) * InchToMeter;
 }
 
-double poundsToKilograms(int pounds)
+double poundsToKilograms(unsigned pounds)
 {
     const double PoundsInKilogram = 2.2;
     return pounds / PoundsInKilogram;

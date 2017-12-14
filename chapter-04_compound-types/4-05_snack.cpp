@@ -19,12 +19,12 @@ struct CandyBar
 {
     std::string brand;
     double weight;
-    int calories;
+    unsigned calories;
 };
 
 int main()
 {
-    CandyBar snack = { "Mocha Munch", 2.3, 350 };
+    CandyBar snack = { "Mocha Munch", 2.3, 350u };
     std::cout << "Snack: " << snack.brand
               << "\nWeight: " << snack.weight
               << "\nCalories: " << snack.calories << std::endl;

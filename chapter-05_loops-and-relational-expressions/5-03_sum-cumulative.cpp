@@ -23,9 +23,8 @@ int main()
     while (number)
     {
         sum += number;
-        cout << "The cumulative sum of the entries is " << sum << ".\n";
-
-        cout << "Enter another number (0 to quit): ";
+        cout << "The cumulative sum of the entries is " << sum << ".\n"
+                "Enter another number (0 to quit): ";
         cin >> number;
     }
 

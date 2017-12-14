@@ -24,7 +24,7 @@ int main()
     using std::cout;
     using std::cin;
 
-    const int MaxSize = 40;
+    const unsigned MaxSize = 40u;
     const char * ExitWord = "done";
 
     cout << "Enter words (to stop, type the word done):\n";

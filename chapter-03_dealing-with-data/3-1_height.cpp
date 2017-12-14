@@ -16,14 +16,14 @@ int main()
     using std::cout;
     using std::cin;
 
-    const int InchesInFoot = 12;
+    const unsigned InchesInFoot = 12u;
 
     cout << "Enter your height in inches: __\b\b";
-    int height;
+    unsigned height;
     cin >> height;
 
-    int feet = height / InchesInFoot;
-    int inches = height % InchesInFoot;
+    unsigned feet = height / InchesInFoot;
+    unsigned inches = height % InchesInFoot;
     cout << "Your height is " << feet << " feet, " << inches << " inches.\n";
 
     return 0;

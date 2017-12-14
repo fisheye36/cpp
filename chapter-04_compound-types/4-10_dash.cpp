@@ -16,7 +16,7 @@ int main()
     using std::cout;
     using std::cin;
 
-    const int Amount = 3;
+    const unsigned Amount = 3u;
 
     cout << "Enter " << Amount << " times for the 40-meter dash in seconds:\n";
     std::array<double, Amount> times;

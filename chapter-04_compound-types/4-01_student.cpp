@@ -29,7 +29,7 @@ struct Student
     std::string firstName;
     std::string lastName;
     char grade;
-    int age;
+    unsigned age;
 };
 
 int main()

@@ -12,15 +12,15 @@
 
 int main()
 {
-    const int MaxFactorial = 100;
-    const int Size = MaxFactorial + 1;
+    const unsigned MaxFactorial = 100u;
+    const unsigned Size = MaxFactorial + 1u;
 
     std::array<long double, Size> factorials;
     factorials[0] = factorials[1] = 1.0;
-    for (int i = 2; i < Size; i++)
+    for (unsigned i = 2u; i < Size; i++)
         factorials[i] = i * factorials[i - 1];
 
-    for (int i = 0; i < Size; i++)
+    for (unsigned i = 0u; i < Size; i++)
         std::cout << i << "! = " << factorials[i] << std::endl;
 
     return 0;

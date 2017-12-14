@@ -21,7 +21,7 @@ int main()
     using std::cout;
     using std::cin;
 
-    const int MaxSize = 40;
+    const unsigned MaxSize = 40u;
 
     cout << "Enter your first name: ";
     char firstName[MaxSize];
@@ -31,7 +31,7 @@ int main()
     char lastName[MaxSize];
     cin.getline(lastName, MaxSize);
 
-    int totalSize = strlen(firstName) + strlen(lastName) + 3;
+    unsigned totalSize = strlen(firstName) + strlen(lastName) + 3u;
     char * concString = new char[totalSize];
 
     strcpy(concString, lastName);

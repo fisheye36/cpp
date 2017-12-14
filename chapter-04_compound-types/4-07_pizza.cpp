@@ -21,7 +21,7 @@
 struct Pizza
 {
     std::string company;
-    int diameter;
+    unsigned diameter;
     double weight;
 };
 

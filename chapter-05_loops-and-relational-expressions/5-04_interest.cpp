@@ -33,7 +33,7 @@ int main()
     double balanceCleo = StartingBalance;
     displayBalances(balanceDaphne, balanceCleo);
 
-    int year = 0;
+    unsigned year = 0u;
     do
     {
         balanceDaphne += SimpleInterest * StartingBalance;

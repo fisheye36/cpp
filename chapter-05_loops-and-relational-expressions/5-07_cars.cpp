@@ -46,8 +46,8 @@ int main()
     cout << "How many cars do you wish to catalog? ";
     unsigned amount;
     (std::cin >> amount).get();
-
     cout << std::endl;
+
     Car * cars = new Car[amount];
     setCarInformation(cars, amount);
 

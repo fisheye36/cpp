@@ -15,7 +15,7 @@ struct CandyBar
 {
     std::string brand;
     double weight;
-    int calories;
+    unsigned calories;
 };
 
 void displaySnackInformation(CandyBar);
@@ -27,9 +27,9 @@ int main()
 
     CandyBar snacks[] =
     {
-        { "Mars", 2.4, 320 },
-        { "Twix", 2.6, 380 },
-        { "Snickers", 3.2, 360 }
+        { "Mars", 2.4, 320u },
+        { "Twix", 2.6, 380u },
+        { "Snickers", 3.2, 360u }
     };
 
     displaySnackInformation(snacks[0]);

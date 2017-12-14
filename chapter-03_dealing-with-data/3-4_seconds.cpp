@@ -15,31 +15,31 @@
 
 #include <iostream>
 
-void displayTime(long long);
+void displayTime(unsigned long long);
 
 int main()
 {
     std::cout << "Enter the number of seconds: ";
-    long long seconds;
+    unsigned long long seconds;
     std::cin >> seconds;
     displayTime(seconds);
 
     return 0;
 }
 
-void displayTime(long long seconds)
+void displayTime(unsigned long long seconds)
 {
-    const int HoursInDay = 24;
-    const int MinutesInHour = 60;
-    const int SecondsInMinute = 60;
+    const unsigned HoursInDay = 24u;
+    const unsigned MinutesInHour = 60u;
+    const unsigned SecondsInMinute = 60u;
 
-    long long days = seconds / (HoursInDay * MinutesInHour * SecondsInMinute);
-    long remainingSeconds = seconds % (HoursInDay * MinutesInHour * SecondsInMinute);
+    unsigned long long days = seconds / (HoursInDay * MinutesInHour * SecondsInMinute);
+    unsigned long remainingSeconds = seconds % (HoursInDay * MinutesInHour * SecondsInMinute);
 
-    int hours = remainingSeconds / (MinutesInHour * SecondsInMinute);
+    unsigned hours = remainingSeconds / (MinutesInHour * SecondsInMinute);
     remainingSeconds = remainingSeconds % (MinutesInHour * SecondsInMinute);
 
-    int minutes = remainingSeconds / SecondsInMinute;
+    unsigned minutes = remainingSeconds / SecondsInMinute;
     remainingSeconds = remainingSeconds % SecondsInMinute;
 
     std::cout << seconds << " seconds = " << days << " days, " << hours << " hours, "
