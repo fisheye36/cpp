@@ -22,20 +22,23 @@
 int main()
 {
     using std::cout;
+    using std::cin;
 
     const int MaxSize = 40;
     const char * ExitWord = "done";
 
     cout << "Enter words (to stop, type the word done):\n";
     char word[MaxSize];
-    std::cin >> word;
+    cin >> word;
 
     unsigned amount = 0u;
     while (strcmp(word, ExitWord))
     {
-        std::cin >> word;
+        cin >> word;
         amount++;
     }
 
     cout << "You entered a total of " << amount << " words.\n";
+
+    return 0;
 }
