@@ -35,7 +35,7 @@ int main()
     {
         finished = true;
 
-        char choice = readChar();;
+        char choice = readChar();
         switch(choice)
         {
             case 'C' :
