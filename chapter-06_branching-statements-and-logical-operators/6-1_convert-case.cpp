@@ -15,12 +15,12 @@ int main()
 {
     using std::cout;
 
-    const char stop = '@';
+    const char Stop = '@';
 
-    cout << "Enter text (to stop, enter " << stop << "):\n";
+    cout << "Enter text (to stop, enter " << Stop << "):\n";
     char ch;
     bool emptyLine = true;
-    while (std::cin.get(ch) && ch != stop)
+    while (std::cin.get(ch) && ch != Stop)
     {
         emptyLine = (ch == '\n');
         if (!isdigit(ch))
