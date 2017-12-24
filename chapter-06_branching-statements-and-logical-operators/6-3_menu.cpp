@@ -34,9 +34,7 @@ int main()
     do
     {
         finished = true;
-
-        char choice = readChar();
-        switch(choice)
+        switch (readChar())
         {
             case 'C' :
             case 'c' :
