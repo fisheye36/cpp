@@ -71,8 +71,7 @@ void displayMenu()
 char readChar()
 {
     char ch;
-    while (std::cin.get(ch) && ch == '\n')
-        continue;
+    std::cin >> ch;
     clearInput();
 
     return ch;

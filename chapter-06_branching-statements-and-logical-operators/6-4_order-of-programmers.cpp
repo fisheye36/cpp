@@ -69,7 +69,7 @@ struct Bop
 enum Display { fullName, title, bopName, preference };
 
 void displayMenu();
-void displayProgrammers(Bop * programmers, unsigned amount, Display display);
+void displayProgrammers(Bop *, unsigned, Display);
 char readChar();
 void clearInput();
 
@@ -164,8 +164,7 @@ void displayProgrammers(Bop * programmers, unsigned amount, Display display)
 char readChar()
 {
     char ch;
-    while (std::cin.get(ch) && ch == '\n')
-        continue;
+    std::cin >> ch;
     clearInput();
 
     return ch;
