@@ -12,6 +12,8 @@
 #include <iostream>
 #include <array>
 
+void clearInput();
+
 int main()
 {
     using std::cout;
@@ -25,6 +27,7 @@ int main()
     unsigned elems = 0u;
     while (elems < Size && (std::cin >> donations[elems] && donations[elems] >= 0.0))
     {
+        clearInput();
         if (++elems < Size)
             cout << "Enter next donation: $";
     }
@@ -49,4 +52,10 @@ int main()
     }
 
     return 0;
+}
+
+void clearInput()
+{
+    while (std::cin.get() != '\n')
+        continue;
 }
