@@ -25,7 +25,7 @@ int main()
             "Enter first donation: $";
     std::array<double, Size> donations;
     unsigned elems = 0u;
-    while (elems < Size && (std::cin >> donations[elems] && donations[elems] >= 0.0))
+    while (elems < Size && std::cin >> donations[elems] && donations[elems] >= 0.0)
     {
         clearInput();
         if (++elems < Size)
