@@ -70,6 +70,7 @@ enum Display { fullName, title, bopName, preference };
 
 void displayMenu();
 void displayProgrammers(Bop *, unsigned, Display);
+
 char readChar();
 void clearInput();
 
