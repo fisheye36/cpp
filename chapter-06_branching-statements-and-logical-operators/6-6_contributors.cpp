@@ -57,6 +57,8 @@ int main()
     cout << endl;
     displayContributors(contributors, amount, StandardContributionHeader,
                         ContributionThreshold, false);
+
+    return 0;
 }
 
 void setContributors(Contributor * contributors, unsigned amount)
