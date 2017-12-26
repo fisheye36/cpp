@@ -36,8 +36,8 @@ struct Car
     unsigned year;
 };
 
-void setCarInformation(Car *, unsigned amount);
-void displayCarInformation(Car *, unsigned amount);
+void setCarInformation(Car *, unsigned);
+void displayCarInformation(Car *, unsigned);
 
 int main()
 {
@@ -46,9 +46,9 @@ int main()
     cout << "How many cars do you wish to catalog? ";
     unsigned amount;
     (std::cin >> amount).get();
-    cout << std::endl;
 
     Car * cars = new Car[amount];
+    cout << std::endl;
     setCarInformation(cars, amount);
 
     cout << "\nHere is your collection:\n";
