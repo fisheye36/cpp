@@ -39,8 +39,8 @@ unsigned readScores(int * scores, unsigned amount)
 {
     using std::cout;
 
-    unsigned scoresRead = 0u;
     cout << "Score #1: ";
+    unsigned scoresRead = 0u;
     while (scoresRead < amount && std::cin >> scores[scoresRead])
     {
         clearInput();
