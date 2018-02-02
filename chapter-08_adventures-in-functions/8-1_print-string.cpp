@@ -14,10 +14,9 @@
  */
 
 #include <iostream>
-#include <string>
 
-void print(const std::string & str, int repeat = 0);
-bool readString(std::string & str);
+void print(const char * str, int repeat = 0);
+bool readString(char * str, unsigned n);
 int readNumber();
 void clearInput();
 
@@ -27,10 +26,12 @@ int main()
 {
     using std::cout;
 
+    const unsigned Size = 80u;
+
     cout << "Enter strings of text. To stop, enter an empty string.\n\n"
             "First string: ";
-    std::string str;
-    while (readString(str))
+    char str[Size];
+    while (readString(str, Size))
     {
         cout << "Enter a number: ";
         int number = readNumber();
@@ -44,7 +45,7 @@ int main()
     return 0;
 }
 
-void print(const std::string & str, int repeat)
+void print(const char * str, int repeat)
 {
     calls++;
     unsigned times = (repeat) ? calls : 1u;
@@ -52,10 +53,12 @@ void print(const std::string & str, int repeat)
         std::cout << str << std::endl;
 }
 
-bool readString(std::string & str)
+bool readString(char * str, unsigned n)
 {
-    getline(std::cin, str);
-    return str.size();
+    std::cin.get(str, n);
+    clearInput();
+
+    return *str;
 }
 
 int readNumber()
