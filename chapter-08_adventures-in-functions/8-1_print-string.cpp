@@ -16,7 +16,6 @@
 #include <iostream>
 
 void print(const char * str, int repeat = 0);
-bool readString(char * str, unsigned n);
 int readNumber();
 void clearInput();
 
@@ -31,14 +30,14 @@ int main()
     cout << "Enter strings of text. To stop, enter an empty string.\n\n"
             "First string: ";
     char str[Size];
-    while (readString(str, Size))
+    while (std::cin.get(str, Size))
     {
+        clearInput();
         cout << "Enter a number: ";
         int number = readNumber();
 
         cout << "\nPrinting your string:\n";
         print(str, number);
-
         cout << "\nEnter another string: ";
     }
 
@@ -51,14 +50,6 @@ void print(const char * str, int repeat)
     unsigned times = (repeat) ? calls : 1u;
     for (unsigned i = 0; i < times; i++)
         std::cout << str << std::endl;
-}
-
-bool readString(char * str, unsigned n)
-{
-    std::cin.get(str, n);
-    clearInput();
-
-    return *str;
 }
 
 int readNumber()
