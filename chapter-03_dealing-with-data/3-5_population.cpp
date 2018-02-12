@@ -4,8 +4,8 @@
  *
  * Write a program that requests the user to enter the current world population and
  * the current population of the U.S. (or of some other nation of your choice). Store
- * the information in variables of type long long. Have the program display the percent
- * that the U.S. (or other nation’s) population is of the world’s population. The
+ * the information in variables of type unsigned long long. Have the program display the
+ * percent that the U.S. (or other nation’s) population is of the world’s population. The
  * output should look something like this:
  *
  * Enter the world's population: 6898758899
@@ -22,8 +22,8 @@ double populationPercentage(unsigned long long, unsigned long long);
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter the world's population: ";
     unsigned long long worldPopulation;

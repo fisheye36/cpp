@@ -15,8 +15,8 @@ double fuelConsumption(unsigned, double);
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter distance in kilometers: ";
     unsigned distance;

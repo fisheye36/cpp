@@ -13,8 +13,8 @@
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     const unsigned InchesInFoot = 12u;
 

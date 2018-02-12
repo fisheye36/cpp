@@ -21,8 +21,8 @@ double bmi(double, double);
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter your height in feet and inches:\nFeet: ";
     unsigned feet;
@@ -38,7 +38,8 @@ int main()
 
     double heightMeters = feetAndInchesToMeters(feet, inches);
     double weightKilograms = poundsToKilograms(pounds);
-    cout << "With a height of " << heightMeters << " m and a weight of " << weightKilograms
+    cout << "With a height of " << heightMeters
+         << " m and a weight of " << weightKilograms
          << " kg your BMI is " << bmi(weightKilograms, heightMeters) << ".\n";
 
     return 0;

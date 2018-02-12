@@ -2,7 +2,7 @@
 
 /**
  *
- * Write a program that asks the user to enter a latitude in degrees, minutes and seconds,
+ * Write a program that asks the user to enter a latitude in degrees, minutes and seconds
  * and that then displays the latitude in decimal format. There are 60 seconds of
  * arc to a minute and 60 minutes of arc to a degree; represent these values with symbolic
  * constants. You should use a separate variable for each input value. A sample
@@ -22,8 +22,8 @@ double latitude(unsigned, unsigned, unsigned);
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter a latitude in degrees, minutes and seconds:\n"
             "First, enter the degrees: ";
@@ -38,8 +38,8 @@ int main()
     unsigned seconds;
     cin >> seconds;
 
-    cout << degrees << " degrees, " << minutes << " minutes, " << seconds
-         << " seconds = " << latitude(degrees, minutes, seconds) << " degrees\n";
+    cout << degrees << " degrees, " << minutes << " minutes, " << seconds << " seconds = "
+         << latitude(degrees, minutes, seconds) << " degrees\n";
 
     return 0;
 }
