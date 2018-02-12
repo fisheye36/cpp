@@ -2,9 +2,9 @@
 
 /**
  *
- * Do Programming Exercise 7 (4.7) but use new to allocate a structure instead of declaring
- * a structure variable. Also have the program request the pizza diameter before it
- * requests the pizza company name.
+ * Do Programming Exercise 7 (4.7) but use new to allocate a structure instead of
+ * declaring a structure variable. Also have the program request the pizza diameter before
+ * it requests the pizza company name.
  *
  */
 
@@ -20,8 +20,9 @@ struct Pizza
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::getline;
 
     Pizza * pizza = new Pizza;
     cout << "Enter pizza diameter in centimeters: ";

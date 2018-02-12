@@ -14,12 +14,16 @@
  */
 
 #include <iostream>
-#include <cstring>
+#include <cstring> // strcat(), strcpy(), strlen()
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::endl;
+    using std::strcat;
+    using std::strcpy;
+    using std::strlen;
 
     const unsigned MaxSize = 40u;
 
@@ -37,7 +41,7 @@ int main()
     strcpy(concString, lastName);
     strcat(concString, ", ");
     strcat(concString, firstName);
-    cout << "Here's the information in a single string: " << concString << std::endl;
+    cout << "Here's the information in a single string: " << concString << endl;
 
     return 0;
 }

@@ -18,7 +18,7 @@ struct CandyBar
 };
 
 void setSnackInformation(CandyBar *, std::string, double, unsigned);
-void displaySnackInformation(CandyBar *);
+void displaySnackInformation(CandyBar);
 
 int main()
 {
@@ -30,11 +30,11 @@ int main()
     setSnackInformation(snacks + 1, "Twix", 2.6, 380u);
     setSnackInformation(snacks + 2, "Snickers", 3.2, 360u);
 
-    displaySnackInformation(snacks);
+    displaySnackInformation(snacks[0]);
     cout << endl;
-    displaySnackInformation(snacks + 1);
+    displaySnackInformation(snacks[1]);
     cout << endl;
-    displaySnackInformation(snacks + 2);
+    displaySnackInformation(snacks[2]);
 
     delete[] snacks;
 
@@ -49,9 +49,9 @@ void setSnackInformation(CandyBar * snack, std::string brand, double weight,
     snack->calories = calories;
 }
 
-void displaySnackInformation(CandyBar * snack)
+void displaySnackInformation(CandyBar snack)
 {
-    std::cout << "Snack: " << snack->brand
-              << "\nWeight: " << snack->weight
-              << "\nCalories: " << snack->calories << std::endl;
+    std::cout << "Snack: " << snack.brand
+              << "\nWeight: " << snack.weight
+              << "\nCalories: " << snack.calories << std::endl;
 }

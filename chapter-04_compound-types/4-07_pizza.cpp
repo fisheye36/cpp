@@ -27,8 +27,9 @@ struct Pizza
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::getline;
 
     Pizza pizza;
     cout << "Enter pizza company name: ";

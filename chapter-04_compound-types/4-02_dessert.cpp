@@ -11,8 +11,9 @@
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::getline;
     using std::string;
 
     cout << "Enter your name: ";

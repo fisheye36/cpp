@@ -13,13 +13,14 @@
 
 int main()
 {
-    using std::cout;
+    using std::array;
     using std::cin;
+    using std::cout;
 
     const unsigned Amount = 3u;
 
     cout << "Enter " << Amount << " times for the 40-meter dash in seconds:\n";
-    std::array<double, Amount> times;
+    array<double, Amount> times;
     cin >> times[0];
     cin >> times[1];
     cin >> times[2];

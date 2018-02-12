@@ -18,8 +18,10 @@
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::endl;
+    using std::getline;
     using std::string;
 
     cout << "Enter your first name: ";
@@ -31,7 +33,7 @@ int main()
     getline(cin, lastName);
 
     string concString = lastName + ", " + firstName;
-    cout << "Here's the information in a single string: " << concString << std::endl;
+    cout << "Here's the information in a single string: " << concString << endl;
 
     return 0;
 }
