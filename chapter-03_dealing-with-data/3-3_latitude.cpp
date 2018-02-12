@@ -26,7 +26,7 @@ int main()
     using std::cout;
 
     cout << "Enter a latitude in degrees, minutes and seconds:\n"
-            "First, enter the degrees: ";
+         << "First, enter the degrees: ";
     unsigned degrees;
     cin >> degrees;
 

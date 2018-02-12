@@ -34,14 +34,14 @@ void displayTime(unsigned long long seconds)
     const unsigned SecondsInMinute = 60u;
 
     unsigned long long days = seconds / (HoursInDay * MinutesInHour * SecondsInMinute);
-    unsigned long remainingSeconds = seconds % (HoursInDay * MinutesInHour * SecondsInMinute);
+    unsigned long remSeconds = seconds % (HoursInDay * MinutesInHour * SecondsInMinute);
 
-    unsigned hours = remainingSeconds / (MinutesInHour * SecondsInMinute);
-    remainingSeconds = remainingSeconds % (MinutesInHour * SecondsInMinute);
+    unsigned hours = remSeconds / (MinutesInHour * SecondsInMinute);
+    remSeconds = remSeconds % (MinutesInHour * SecondsInMinute);
 
-    unsigned minutes = remainingSeconds / SecondsInMinute;
-    remainingSeconds = remainingSeconds % SecondsInMinute;
+    unsigned minutes = remSeconds / SecondsInMinute;
+    remSeconds = remSeconds % SecondsInMinute;
 
     std::cout << seconds << " seconds = " << days << " days, " << hours << " hours, "
-              << minutes << " minutes, " << remainingSeconds << " seconds\n";
+              << minutes << " minutes, " << remSeconds << " seconds\n";
 }
