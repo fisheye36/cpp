@@ -21,11 +21,12 @@ double celsiusToFahrenheit(double);
 
 int main()
 {
+    using std::cin;
     using std::cout;
 
     cout << "Please enter a Celsius value: ";
     double celsius;
-    std::cin >> celsius;
+    cin >> celsius;
     cout << celsius << " degrees Celsius is " << celsiusToFahrenheit(celsius)
          << " degrees Fahrenheit.\n";
 

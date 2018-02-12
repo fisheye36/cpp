@@ -18,8 +18,9 @@ void clock(int, int);
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::endl;
 
     cout << "Enter the number of hours: ";
     int hours;
@@ -31,7 +32,7 @@ int main()
 
     cout << "Time: ";
     clock(hours, minutes);
-    cout << std::endl;
+    cout << endl;
 
     return 0;
 }

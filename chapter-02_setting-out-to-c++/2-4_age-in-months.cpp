@@ -16,11 +16,12 @@ int ageInMonths(int);
 
 int main()
 {
+    using std::cin;
     using std::cout;
 
     cout << "Enter your age: ";
     int age;
-    std::cin >> age;
+    cin >> age;
     cout << "Your age in months is " << ageInMonths(age) << ".\n";
 
     return 0;

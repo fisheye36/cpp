@@ -13,8 +13,8 @@
  * An astronomical unit is the average distance from the earth to the sun (about
  * 150,000,000 km or 93,000,000 miles), and a light year is the distance light travels in
  * a year (about 10 trillion kilometers or 6 trillion miles). (The nearest star after the
- * sun is about 4.2 light years away.) Use type double (as in Listing 2.4) and this conversion
- * factor:
+ * sun is about 4.2 light years away.) Use type double (as in Listing 2.4) and this
+ * conversion factor:
  * 1 light year = 63,240 astronomical units
  *
  */
@@ -25,11 +25,12 @@ double lightYearsToAstroUnits(double);
 
 int main()
 {
+    using std::cin;
     using std::cout;
 
     cout << "Enter the number of light years: ";
     double lightYears;
-    std::cin >> lightYears;
+    cin >> lightYears;
     cout << lightYears << " light years = " << lightYearsToAstroUnits(lightYears)
          << " astronomical units.\n";
 

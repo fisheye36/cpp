@@ -11,11 +11,9 @@
 
 int main()
 {
-    using std::cout;
-
-    cout << "Kamil Warchol\n";
-    cout << "Przyszlosci 15\n";
-    cout << "32-566 Alwernia\n";
+    std::cout << "Kamil Warchol\n"
+              << "Przyszlosci 15\n"
+              << "32-566 Alwernia\n";
 
     return 0;
 }
