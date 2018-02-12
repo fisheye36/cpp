@@ -16,7 +16,7 @@ int main()
     const unsigned Size = MaxFactorial + 1u;
 
     std::array<long double, Size> factorials;
-    factorials[0] = factorials[1] = 1.0;
+    factorials[0] = factorials[1] = 1.0L;
     for (unsigned i = 2u; i < Size; i++)
         factorials[i] = i * factorials[i - 1];
 

@@ -15,7 +15,9 @@ unsigned long long yearlySales(unsigned *, unsigned);
 
 int main()
 {
+    using std::cin;
     using std::cout;
+    using std::endl;
 
     const unsigned Years = 3u;
     const unsigned MonthsInYear = 12u;
@@ -42,9 +44,9 @@ int main()
         for (unsigned month = 0u; month < MonthsInYear; month++)
         {
             cout << "Enter the number of books you sold in " << Months[month] << ": ";
-            std::cin >> sales[year][month];
+            cin >> sales[year][month];
         }
-        cout << std::endl;
+        cout << endl;
     }
 
     unsigned long long sumYear[Years];

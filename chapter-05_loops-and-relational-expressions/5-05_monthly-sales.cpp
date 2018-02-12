@@ -6,8 +6,8 @@
  * of monthly sales (in terms of number of books, not of money). The program should
  * use a loop to prompt you by month, using an array of char * (or an array of
  * string objects, if you prefer) initialized to the month strings and storing the input
- * data in an array of int. Then, the program should find the sum of the array contents
- * and report the total sales for the year.
+ * data in an array of unsigned int. Then, the program should find the sum of the array
+ * contents and report the total sales for the year.
  *
  */
 
@@ -18,6 +18,7 @@ unsigned long long yearlySales(unsigned *, unsigned);
 
 int main()
 {
+    using std::cin;
     using std::cout;
 
     const unsigned MonthsInYear = 12u;
@@ -41,7 +42,7 @@ int main()
     for (unsigned month = 0u; month < MonthsInYear; month++)
     {
         cout << "Enter the number of books you sold in " << Months[month] << ": ";
-        std::cin >> sales[month];
+        cin >> sales[month];
     }
 
     unsigned long long sum = yearlySales(sales, MonthsInYear);

@@ -16,8 +16,8 @@ long long sumBetween(int, int);
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter first number: ";
     int from;

@@ -13,21 +13,20 @@
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
     using std::string;
 
     const string ExitWord = "done";
 
-    cout << "Enter words (to stop, type the word done):\n";
+    cout << "Enter words (to stop, type the word " << ExitWord << "):\n";
     string word;
     cin >> word;
-
     unsigned amount = 0u;
     while (word != ExitWord)
     {
-        cin >> word;
         amount++;
+        cin >> word;
     }
 
     cout << "You entered a total of " << amount << " words.\n";

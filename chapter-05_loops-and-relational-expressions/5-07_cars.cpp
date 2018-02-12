@@ -4,8 +4,8 @@
  *
  * Design a structure called Car that holds the following information about an automobile:
  * its make, as a string in a character array or in a string object and the year
- * it was built, as an integer. Write a program that asks the user how many cars to catalog.
- * The program should then use new to create a dynamic array of that many Car
+ * it was built, as an integer. Write a program that asks the user how many cars to
+ * catalog. The program should then use new to create a dynamic array of that many Car
  * structures. Next, it should prompt the user to input the make (which might consist
  * of more than one word) and year information for each structure. Note that this
  * requires some care because it alternates reading strings with numeric data (see
@@ -41,14 +41,16 @@ void displayCarInformation(Car *, unsigned);
 
 int main()
 {
+    using std::cin;
     using std::cout;
+    using std::endl;
 
     cout << "How many cars do you wish to catalog? ";
     unsigned amount;
-    (std::cin >> amount).get();
+    (cin >> amount).get();
 
     Car * cars = new Car[amount];
-    cout << std::endl;
+    cout << endl;
     setCarInformation(cars, amount);
 
     cout << "\nHere is your collection:\n";
@@ -60,8 +62,8 @@ int main()
 
 void setCarInformation(Car * cars, unsigned amount)
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     for (unsigned i = 0u; i < amount; i++)
     {

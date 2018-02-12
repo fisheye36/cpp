@@ -17,25 +17,25 @@
  */
 
 #include <iostream>
-#include <cstring>
+#include <cstring> // strcmp()
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::strcmp;
 
     const unsigned MaxSize = 40u;
     const char * ExitWord = "done";
 
-    cout << "Enter words (to stop, type the word done):\n";
+    cout << "Enter words (to stop, type the word " << ExitWord << "):\n";
     char word[MaxSize];
     cin >> word;
-
     unsigned amount = 0u;
     while (strcmp(word, ExitWord))
     {
-        cin >> word;
         amount++;
+        cin >> word;
     }
 
     cout << "You entered a total of " << amount << " words.\n";

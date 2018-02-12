@@ -38,6 +38,7 @@ int main()
 void displayTriangle(unsigned rows, char fill, char print)
 {
     using std::cout;
+    using std::endl;
 
     for (unsigned i = 1u; i <= rows; i++)
     {
@@ -45,6 +46,6 @@ void displayTriangle(unsigned rows, char fill, char print)
             cout << fill;
         for (unsigned j = rows - i + 1u; j <= rows; j++)
             cout << print;
-        cout << std::endl;
+        cout << endl;
     }
 }

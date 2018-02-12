@@ -12,19 +12,19 @@
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
-    cout << "Enter a number: ";
+    cout << "Enter numbers. To stop, enter 0.\n"
+            "Enter first number: ";
     int number;
     cin >> number;
-
     long long sum = 0LL;
     while (number)
     {
         sum += number;
-        cout << "The cumulative sum of the entries is " << sum << ".\n"
-                "Enter another number (0 to quit): ";
+        cout << "The cumulative sum of the entries is " << sum << ".\n\n"
+                "Enter another number: ";
         cin >> number;
     }
 
