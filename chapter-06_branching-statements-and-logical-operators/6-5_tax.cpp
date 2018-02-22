@@ -24,12 +24,13 @@ void clearInput();
 
 int main()
 {
+    using std::cin;
     using std::cout;
 
     cout << "Enter your income in tvarps. To stop, enter invalid or negative number.\n"
             "Enter first income: ";
     double income;
-    while (std::cin >> income && income >= 0.0)
+    while (cin >> income && income >= 0.0)
     {
         clearInput();
         double tax = calculateTax(income);

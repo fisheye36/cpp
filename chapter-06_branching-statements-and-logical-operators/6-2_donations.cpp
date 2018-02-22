@@ -9,13 +9,15 @@
  *
  */
 
-#include <iostream>
 #include <array>
+#include <iostream>
 
 void clearInput();
 
 int main()
 {
+    using std::array;
+    using std::cin;
     using std::cout;
 
     const unsigned Size = 10u;
@@ -23,9 +25,9 @@ int main()
     cout << "Enter up to " << Size << " donations."
             " To stop, enter invalid or negative number.\n"
             "Enter first donation: $";
-    std::array<double, Size> donations;
+    array<double, Size> donations;
     unsigned elems = 0u;
-    while (elems < Size && std::cin >> donations[elems] && donations[elems] >= 0.0)
+    while (elems < Size && cin >> donations[elems] && donations[elems] >= 0.0)
     {
         clearInput();
         if (++elems < Size)

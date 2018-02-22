@@ -63,13 +63,15 @@ int main()
 
 void setContributors(Contributor * contributors, unsigned amount)
 {
+    using std::cin;
     using std::cout;
+    using std::getline;
 
     for (unsigned i = 0u; i < amount; i++)
     {
         cout << "Contributor #" << i + 1u << ":\n"
                 "Enter full name: ";
-        getline(std::cin, contributors[i].name);
+        getline(cin, contributors[i].name);
 
         cout << "Enter contribution: $";
         contributors[i].contribution = readContribution();
@@ -80,6 +82,7 @@ void displayContributors(Contributor * contributors, unsigned amount, std::strin
                          double limit, bool moreOrEqual)
 {
     using std::cout;
+    using std::endl;
 
     cout << header << ":\n\n";
 
@@ -94,7 +97,7 @@ void displayContributors(Contributor * contributors, unsigned amount, std::strin
         {
             cout << ((contributors[i].name.size()) ? contributors[i].name
                                                    : "Anonymous contributor")
-                 << ": $" << contributors[i].contribution << std::endl;
+                 << ": $" << contributors[i].contribution << endl;
             anyContributors = true;
         }
     }

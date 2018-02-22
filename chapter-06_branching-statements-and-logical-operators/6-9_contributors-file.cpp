@@ -19,10 +19,10 @@
  *
  */
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
-#include <cstdlib>
+#include <cstdlib> // EXIT_FAILURE, exit()
 
 struct Contributor
 {
@@ -36,6 +36,7 @@ void invalidSyntax();
 
 int main()
 {
+    using std::cin;
     using std::cout;
     using std::endl;
     using std::string;
@@ -46,7 +47,7 @@ int main()
 
     cout << "Enter file name to open: ";
     string fileName;
-    std::cin >> fileName;
+    cin >> fileName;
 
     unsigned amount;
     Contributor * contributors = readContributors(&amount, fileName);
@@ -73,18 +74,22 @@ Contributor * readContributors(unsigned * amount, std::string fileName)
     }
 
     if (!(fileIn >> *amount) || *amount == 0u)
+    {
+        fileIn.close();
         invalidSyntax();
+    }
     fileIn.get();
 
     Contributor * contributors = new Contributor[*amount];
     for (unsigned i = 0u; i < *amount; i++)
     {
-        getline(fileIn, contributors[i].name);
+        std::getline(fileIn, contributors[i].name);
 
         if (!(fileIn >> contributors[i].contribution)
             || contributors[i].contribution <= 0.0)
         {
             delete[] contributors;
+            fileIn.close();
             invalidSyntax();
         }
         fileIn.get();
@@ -98,6 +103,7 @@ void displayContributors(Contributor * contributors, unsigned amount, std::strin
                          double limit, bool moreOrEqual)
 {
     using std::cout;
+    using std::endl;
 
     cout << header << ":\n\n";
 
@@ -112,7 +118,7 @@ void displayContributors(Contributor * contributors, unsigned amount, std::strin
         {
             cout << ((contributors[i].name.size()) ? contributors[i].name
                                                    : "Anonymous contributor")
-                 << ": $" << contributors[i].contribution << std::endl;
+                 << ": $" << contributors[i].contribution << endl;
             anyContributors = true;
         }
     }
@@ -124,5 +130,5 @@ void displayContributors(Contributor * contributors, unsigned amount, std::strin
 void invalidSyntax()
 {
     std::cout << "Invalid file syntax.\n";
-    exit(EXIT_FAILURE);
+    std::exit(EXIT_FAILURE);
 }

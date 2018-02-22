@@ -7,20 +7,22 @@
  *
  */
 
-#include <iostream>
 #include <fstream>
+#include <iostream>
 #include <string>
-#include <cstdlib>
+#include <cstdlib> // EXIT_FAILURE, exit()
 
 unsigned long long countChars(std::string);
 
 int main()
 {
+    using std::cin;
     using std::cout;
+    using std::string;
 
     cout << "Enter file name to open: ";
-    std::string fileName;
-    std::cin >> fileName;
+    string fileName;
+    cin >> fileName;
 
     unsigned long long count = countChars(fileName);
     cout << count << ((count == 1uLL) ? " character" : " characters") << " read.\n";
@@ -31,8 +33,10 @@ int main()
 unsigned long long countChars(std::string fileName)
 {
     using std::cout;
+    using std::exit;
+    using std::ifstream;
 
-    std::ifstream fileIn;
+    ifstream fileIn;
     fileIn.open(fileName);
     if (!fileIn.is_open())
     {

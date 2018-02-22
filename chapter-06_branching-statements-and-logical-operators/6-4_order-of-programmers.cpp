@@ -77,6 +77,7 @@ void clearInput();
 int main()
 {
     using std::cout;
+    using std::endl;
 
     Bop programmers[] =
     {
@@ -120,7 +121,7 @@ int main()
                 continue;
         }
 
-        cout << std::endl;
+        cout << endl;
         displayProgrammers(programmers, amount, display);
         cout << "\nNext choice: ";
     } while (!finished);

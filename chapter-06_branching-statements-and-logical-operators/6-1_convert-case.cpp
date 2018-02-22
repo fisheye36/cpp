@@ -9,18 +9,24 @@
  */
 
 #include <iostream>
-#include <cctype>
+#include <cctype> // isdigit(), islower(), tolower(), toupper()
 
 int main()
 {
+    using std::cin;
     using std::cout;
+    using std::endl;
+    using std::isdigit;
+    using std::islower;
+    using std::tolower;
+    using std::toupper;
 
     const char Stop = '@';
 
     cout << "Enter text (to stop, enter " << Stop << "):\n";
     char ch;
     bool emptyLine = true;
-    while (std::cin.get(ch) && ch != Stop)
+    while (cin.get(ch) && ch != Stop)
     {
         emptyLine = (ch == '\n');
         if (!isdigit(ch))
@@ -33,7 +39,7 @@ int main()
     }
 
     if (!emptyLine)
-        cout << std::endl;
+        cout << endl;
 
     return 0;
 }

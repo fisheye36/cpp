@@ -22,13 +22,16 @@
 
 #include <iostream>
 #include <string>
-#include <cctype>
+#include <cctype> // isalpha(), tolower()
 
 bool isVowel(char);
 
 int main()
 {
+    using std::cin;
     using std::cout;
+    using std::endl;
+    using std::isalpha;
     using std::string;
 
     const string ExitWord = "q";
@@ -38,7 +41,7 @@ int main()
     unsigned vowels = 0u;
     unsigned consonants = 0u;
     unsigned others = 0u;
-    while (std::cin >> word && word != ExitWord)
+    while (cin >> word && word != ExitWord)
     {
         if (isalpha(word[0]))
         {
@@ -53,7 +56,7 @@ int main()
         }
     }
 
-    cout << std::endl << vowels << ((vowels == 1u) ? " word" : " words")
+    cout << endl << vowels << ((vowels == 1u) ? " word" : " words")
          << " beginning with vowels.\n"
          << consonants << ((consonants == 1u) ? " word" : " words")
          << " beginning with consonants.\n"
@@ -67,7 +70,7 @@ bool isVowel(char ch)
     const char Vowels[] = { 'a', 'e', 'i', 'o', 'u' };
     const unsigned Amount = sizeof Vowels;
 
-    ch = tolower(ch);
+    ch = std::tolower(ch);
     for (unsigned i = 0u; i < Amount; i++)
     {
         if (ch == Vowels[i])
