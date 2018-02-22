@@ -2,8 +2,8 @@
 
 /**
  *
- * This exercise provides practice in writing functions dealing with arrays and structures.
- * The following is a program skeleton. Complete it by providing the described
+ * This exercise provides practice in writing functions dealing with arrays and
+ * structures. The following is a program skeleton. Complete it by providing the described
  * functions:
  *
  * #include <iostream>
@@ -135,15 +135,16 @@ int main()
 unsigned getInfo(Student * pa, unsigned n)
 {
     using std::cout;
+    using std::endl;
 
     unsigned i;
     for (i = 0u; i < n; i++)
     {
         if (i > 0u)
-            cout << std::endl;
+            cout << endl;
 
         cout << "Student #" << i + 1u << ":\n"
-             << "Enter student's name: ";
+                "Enter student's name: ";
         if (!readString(pa[i].fullName, Lenght))
             break;
 
@@ -186,10 +187,7 @@ bool readString(char * str, unsigned n)
     std::cin.get(str, n);
     clearInput();
 
-    if (*str)
-        return true;
-
-    return false;
+    return *str;
 }
 
 unsigned readSize()

@@ -5,7 +5,7 @@
  * Write a program that asks the user to enter up to 10 golf scores, which are to be
  * stored in an array. You should provide a means for the user to terminate input prior
  * to entering 10 scores. The program should display all the scores on one line and
- * report the average score. Handle input, display, and the average calculation with
+ * report the average score. Handle input, display and the average calculation with
  * three separate array-processing functions.
  *
  */
@@ -37,11 +37,12 @@ int main()
 
 unsigned readScores(int * scores, unsigned amount)
 {
+    using std::cin;
     using std::cout;
 
     cout << "Score #1: ";
     unsigned scoresRead = 0u;
-    while (scoresRead < amount && std::cin >> scores[scoresRead])
+    while (scoresRead < amount && cin >> scores[scoresRead])
     {
         clearInput();
         if (++scoresRead < amount)
@@ -54,13 +55,14 @@ unsigned readScores(int * scores, unsigned amount)
 void displayScores(const int * scores, unsigned amount)
 {
     using std::cout;
+    using std::endl;
 
     if (amount > 0u)
     {
         cout << "Your golf scores: " << scores[0];
         for (unsigned i = 1u; i < amount; i++)
             cout << ", " << scores[i];
-        cout << std::endl;
+        cout << endl;
     }
 }
 

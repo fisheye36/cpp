@@ -46,8 +46,8 @@ int main()
 
 bool readLottery(Lottery * lottery)
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter total number of choices on the game card: ";
     if (!(cin >> lottery->fieldNumbers) || lottery->fieldNumbers < 2u)

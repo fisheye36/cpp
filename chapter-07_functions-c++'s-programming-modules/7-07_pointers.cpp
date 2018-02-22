@@ -50,8 +50,8 @@ int main()
 
 double * fillArray(double * begin, double * end)
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter value #1: ";
     unsigned i = 2u;

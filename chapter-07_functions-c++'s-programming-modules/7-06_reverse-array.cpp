@@ -10,14 +10,14 @@
  * input and it returns the actual number of entries.
  *
  * showArray() takes as arguments the name of an array of double values and an
- * array size and displays the contents of the array.
+ * array size, and displays the contents of the array.
  *
  * reverseArray() takes as arguments the name of an array of double values and an
- * array size and reverses the order of the values stored in the array.
+ * array size, and reverses the order of the values stored in the array.
  *
  * The program should use these functions to fill an array, show the array, reverse the
- * array, show the array, reverse all but the first and last elements of the array and then
- * show the array.
+ * array, show the array, reverse all but the first and last elements of the array and
+ * then show the array.
  *
  */
 
@@ -58,11 +58,12 @@ int main()
 
 unsigned fillArray(double * arr, unsigned size)
 {
+    using std::cin;
     using std::cout;
 
     cout << "Number #1: ";
     unsigned i = 0u;
-    while (i < size && std::cin >> arr[i])
+    while (i < size && cin >> arr[i])
     {
         clearInput();
         if (++i < size)
@@ -82,11 +83,12 @@ void reverseArray(double * arr, unsigned size)
 void showArray(const double * arr, unsigned size)
 {
     using std::cout;
+    using std::endl;
 
     cout << arr[0];
     for (unsigned i = 1u; i < size; i++)
         cout << ", " << arr[i];
-    cout << std::endl;
+    cout << endl;
 }
 
 void swap(double * a, double * b)

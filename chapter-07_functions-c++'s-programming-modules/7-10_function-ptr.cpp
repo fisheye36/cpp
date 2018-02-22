@@ -107,8 +107,8 @@ double divide(double x, double y)
 
 bool readPair(Pair * pair)
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
 
     cout << "Enter first number: ";
     if (!(cin >> pair->x))

@@ -13,6 +13,7 @@
  */
 
 #include <iostream>
+#include <string>
 
 double harmonic(double a, double b);
 double readNumber(const std::string * prompt);
@@ -43,11 +44,12 @@ double harmonic(double a, double b)
 
 double readNumber(const std::string * prompt)
 {
+    using std::cin;
     using std::cout;
 
     cout << *prompt;
     double value;
-    while (!(std::cin >> value))
+    while (!(cin >> value))
     {
         clearInput();
         cout << "Try again: ";
