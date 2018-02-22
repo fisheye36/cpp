@@ -15,7 +15,7 @@
  */
 
 #include <iostream>
-#include <cstring>
+#include <cstring> // strncpy()
 
 const unsigned Size = 40u;
 
@@ -28,7 +28,7 @@ struct CandyBar
 
 void setCandyBar(CandyBar & candyBar, const char * brand = "Millennium Munch",
                  double weight = 2.85, unsigned calories = 350u);
-void display(const CandyBar & candyBar);
+inline void display(const CandyBar & candyBar);
 
 int main()
 {
@@ -53,7 +53,7 @@ int main()
 void setCandyBar(CandyBar & candyBar, const char * brand, double weight,
                  unsigned calories)
 {
-    strncpy(candyBar.brand, brand, Size - 1u);
+    std::strncpy(candyBar.brand, brand, Size - 1u);
     candyBar.brand[Size] = '\0';
     candyBar.weight = weight;
     candyBar.calories = calories;

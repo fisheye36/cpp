@@ -5,8 +5,8 @@
  * Write a template function maxN() that takes as its arguments an array of items of
  * type T and an integer representing the number of elements in the array and that
  * returns the largest item in the array. Test it in a program that uses the function
- * template with an array of six int values and an array of four double values. The program
- * should also include a specialization that takes an array of pointers-to-char as
+ * template with an array of six int values and an array of four double values. The
+ * program should also include a specialization that takes an array of pointers-to-char as
  * an argument and the number of pointers as a second argument and that returns the
  * address of the longest string. If multiple strings are tied for having the longest
  * length, the function should return the address of the first one tied for longest. Test
@@ -15,13 +15,13 @@
  */
 
 #include <iostream>
-#include <cstring>
+#include <cstring> // strcpy, strlen
 
 template <typename T>
-    void fillArray(T * arr, unsigned size);
+    inline void fillArray(T * arr, unsigned size);
 template <>
-    void fillArray(char ** arr, unsigned size);
-void freeArray(char ** arr, unsigned size);
+    inline void fillArray(char ** arr, unsigned size);
+inline void freeArray(char ** arr, unsigned size);
 template <typename T>
     T maxN(const T * arr, unsigned size);
 template <>
@@ -30,7 +30,7 @@ template <>
 template <typename T>
     void readValue(T & value);
 void readString(char * & str);
-void clearInput();
+inline void clearInput();
 
 int main()
 {
@@ -102,6 +102,8 @@ T maxN(const T * arr, unsigned size)
 template <>
 char * maxN(char * const * arr, unsigned size)
 {
+    using std::strlen;
+
     char * maxStr = arr[0];
     unsigned maxLen = strlen(maxStr);
     for (unsigned i = 1u; i < size; i++)
@@ -140,7 +142,7 @@ void readString(char * & str)
     clearInput();
 
     str = new char[strlen(temp) + 1];
-    strcpy(str, temp);
+    std::strcpy(str, temp);
 }
 
 void clearInput()

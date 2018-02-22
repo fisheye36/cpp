@@ -11,9 +11,9 @@
 #include <iostream>
 
 template <typename T>
-    T SumArray(T * arr, unsigned size);
+    inline T SumArray(const T * arr, unsigned size);
 template <typename T>
-    T SumArray(T ** arr, unsigned size);
+    inline T SumArray(T ** arr, unsigned size);
 
 const unsigned Size = 50u;
 
@@ -49,7 +49,7 @@ int main()
 }
 
 template <typename T>
-T SumArray(T * arr, unsigned size)
+T SumArray(const T * arr, unsigned size)
 {
     T sum = 0;
     for (unsigned i = 0u; i < size; i++)

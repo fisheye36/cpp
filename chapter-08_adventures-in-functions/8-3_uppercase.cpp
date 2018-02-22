@@ -21,14 +21,15 @@
 
 #include <iostream>
 #include <string>
-#include <cctype>
+#include <cctype> // toupper()
 
-const std::string & uppercase(std::string & str);
+inline const std::string & uppercase(std::string & str);
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::getline;
     using std::string;
 
     const string ExitWord = "q";
@@ -51,7 +52,7 @@ const std::string & uppercase(std::string & str)
 {
     const unsigned Size = str.size();
     for (unsigned i = 0u; i < Size; i++)
-        str[i] = toupper(str[i]);
+        str[i] = std::toupper(str[i]);
 
     return str;
 }

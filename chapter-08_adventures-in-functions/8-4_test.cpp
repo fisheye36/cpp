@@ -19,7 +19,6 @@
  * {
  *     Stringy beany;
  *     char testing[] = "Reality isn't what it used to be.";
- *
  *     set(beany, testing); // first argument is a reference,
  *                          // allocates space to hold copy of testing,
  *                          // sets str member of beany to point to the
@@ -51,7 +50,7 @@
  */
 
 #include <iostream>
-#include <cstring>
+#include <cstring> // strcpy(), strlen()
 
 struct Stringy
 {
@@ -60,15 +59,14 @@ struct Stringy
 };
 
 void set(Stringy & stringy, const char * str);
-void unset(Stringy & stringy);
-void show(const Stringy & stringy, unsigned times = 1u);
-void show(const char * str, unsigned times = 1u);
+inline void unset(Stringy & stringy);
+inline void show(const Stringy & stringy, unsigned times = 1u);
+inline void show(const char * str, unsigned times = 1u);
 
 int main()
 {
     Stringy beany;
     char testing[] = "Reality isn't what it used to be.";
-
     set(beany, testing);
 
     show(beany);
@@ -88,9 +86,9 @@ int main()
 
 void set(Stringy & stringy, const char * str)
 {
-    stringy.len = strlen(str);
+    stringy.len = std::strlen(str);
     stringy.str = new char[stringy.len + 1u];
-    strcpy(stringy.str, str);
+    std::strcpy(stringy.str, str);
 }
 
 void unset(Stringy & stringy)

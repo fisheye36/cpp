@@ -13,13 +13,13 @@
 #include <iostream>
 
 template <typename T>
-    void fillArray(T * arr, unsigned size);
+    inline void fillArray(T * arr, unsigned size);
 template <typename T>
     T max5(const T * arr);
 
 template <typename T>
     void readValue(T & value);
-void clearInput();
+inline void clearInput();
 
 const unsigned Size = 5u;
 

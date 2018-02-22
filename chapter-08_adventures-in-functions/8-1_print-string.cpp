@@ -7,9 +7,9 @@
  * nonzero, the function should print the string a number of times equal to the number
  * of times that function has been called at that point. (Note that the number of
  * times the string is printed is not equal to the value of the second argument; it is
- * equal to the number of times the function has been called.) Yes, this is a silly function,
- * but it makes you use some of the techniques discussed in this chapter. Use the
- * function in a simple program that demonstrates how the function works.
+ * equal to the number of times the function has been called.) Yes, this is a silly
+ * function, but it makes you use some of the techniques discussed in this chapter. Use
+ * the function in a simple program that demonstrates how the function works.
  *
  */
 
@@ -17,12 +17,13 @@
 
 void print(const char * str, int repeat = 0);
 int readNumber();
-void clearInput();
+inline void clearInput();
 
 unsigned calls = 0u;
 
 int main()
 {
+    using std::cin;
     using std::cout;
 
     const unsigned Size = 80u;
@@ -30,7 +31,7 @@ int main()
     cout << "Enter strings of text. To stop, enter an empty string.\n\n"
             "First string: ";
     char str[Size];
-    while (std::cin.get(str, Size))
+    while (cin.get(str, Size))
     {
         clearInput();
         cout << "Enter a number: ";
@@ -48,7 +49,7 @@ void print(const char * str, int repeat)
 {
     calls++;
     unsigned times = (repeat) ? calls : 1u;
-    for (unsigned i = 0; i < times; i++)
+    for (unsigned i = 0u; i < times; i++)
         std::cout << str << std::endl;
 }
 
