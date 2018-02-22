@@ -35,7 +35,6 @@ int main()
     displaySnackInformation(snacks[1]);
     cout << endl;
     displaySnackInformation(snacks[2]);
-
     delete[] snacks;
 
     return 0;

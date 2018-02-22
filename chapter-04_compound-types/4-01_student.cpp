@@ -34,8 +34,10 @@ struct Student
 
 int main()
 {
-    using std::cout;
     using std::cin;
+    using std::cout;
+    using std::endl;
+    using std::getline;
 
     Student user;
     cout << "What is your first name? ";
@@ -52,7 +54,7 @@ int main()
 
     cout << "\nName: " << user.lastName << ", " << user.firstName
          << "\nGrade: " << char(user.grade + 1)
-         << "\nAge: " << user.age << std::endl;
+         << "\nAge: " << user.age << endl;
 
     return 0;
 }

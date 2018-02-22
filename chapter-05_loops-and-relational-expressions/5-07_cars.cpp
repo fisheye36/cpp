@@ -64,6 +64,7 @@ void setCarInformation(Car * cars, unsigned amount)
 {
     using std::cin;
     using std::cout;
+    using std::getline;
 
     for (unsigned i = 0u; i < amount; i++)
     {

@@ -7,8 +7,8 @@
  *
  */
 
-#include <iostream>
 #include <array>
+#include <iostream>
 
 int main()
 {

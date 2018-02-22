@@ -18,10 +18,11 @@ int main()
     using std::cin;
     using std::cout;
     using std::endl;
+    using std::string;
 
     const unsigned Years = 3u;
     const unsigned MonthsInYear = 12u;
-    const std::string Months[MonthsInYear] =
+    const string Months[MonthsInYear] =
     {
         "January",
         "February",
